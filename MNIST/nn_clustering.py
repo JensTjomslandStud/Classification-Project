@@ -123,7 +123,7 @@ def plot_confusion_matrix(cm, save_path=None):
     """
     plt.figure(figsize=(10, 8))
     plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
-    plt.title('Confusion Matrix - NN with K-means Clustering Classifier')
+    plt.title('Confusion Matrix - Nearest Neighbor with Clustering Classifier')
     plt.colorbar()
     plt.xlabel('Predicted Label')
     plt.ylabel('True Label')

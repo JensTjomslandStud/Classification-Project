@@ -60,7 +60,6 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.2)
 
 N = 1000
 for i in range(N):
-    # Forward pass
     z = model(X_train).t()
     g = sigmoid(z)
     loss = MSE(g, t_train) 

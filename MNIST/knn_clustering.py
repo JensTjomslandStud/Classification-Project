@@ -158,7 +158,7 @@ def main():
     """Main execution"""
     
     print("=" * 60)
-    print("K-NEAREST NEIGHBORS CLASSIFIER FOR MNIST (k=7)")
+    print("CONFUSION MATRIX - K-NEAREST NEIGHBORS CLASSIFIER (k=7)")
     print("=" * 60)
     
     # Load data
@@ -195,7 +195,7 @@ def main():
     metrics = evaluate_classifier(test_labels, predictions, class_names)
     
     plot_confusion_matrix(metrics['confusion_matrix'], 
-                         'k-NN Classifier (k=7) - MNIST', 
+                         'Confusion Matrix - K-Nearest Neighbors Classifier (k=7)', 
                          save_path='knn_k7_confusion_matrix.png')
     
     # Print per-class accuracy
