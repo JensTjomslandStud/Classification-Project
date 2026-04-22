@@ -21,8 +21,8 @@ X_train = np.vstack([class_1_training, class_2_training, class_3_training])
 X_test = np.vstack([class_1_test, class_2_test, class_3_test])
 
 # Select wanted features
-X_train = X_train[:, [2]]
-X_test = X_test[:, [2]]
+X_train = X_train[:]
+X_test = X_test[:]
 
 # Hardcode labels
 t_train = np.vstack([
@@ -49,7 +49,7 @@ X_train = (X_train - mean) / std
 X_test = (X_test - mean) / std
 
 # Define the model
-model = torch.nn.Linear(in_features = 1, out_features =3, bias = True)
+model = torch.nn.Linear(in_features = 4, out_features =3, bias = True)
 
 def MSE(g, t):
     return 0.5 * torch.sum((g - t) ** 2)
